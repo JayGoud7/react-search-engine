@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Switchcar from "./components/searchcar";
+import ImageList from "./components/imagesList";
+import searchimages from "./Api";
 
 function App() {
+  const [image, setimage] = useState([]);
+
+  async function handleclick(term) {
+    const results = await searchimages(term);
+    setimage(results);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switchcar onSubmit={handleclick} />
+      <ImageList images={image} />
+    </>
   );
 }
 
