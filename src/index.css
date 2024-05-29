@@ -103,8 +103,8 @@ input {
   .search-button {
     margin-left: 1%;
     position: absolute;
-    top: 33%;
-    padding: 0.4vw 0.9vw;
+    top: 37%;
+    padding: 0.1vw 0.9vw;
     border-radius: 12px;
     border: 1px solid black;
     background-color: #fbf9f9;
