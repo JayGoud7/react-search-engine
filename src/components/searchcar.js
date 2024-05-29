@@ -18,7 +18,9 @@ function Searchcar({ onSubmit }) {
       <form onSubmit={handleclick}>
         <div>
           <input value={term} placeholder='search imgs' onChange={handlechange} />
-          <i class="ri-search-line"></i>
+          <button className="search-button" type="submit">
+            <i class="ri-search-line"></i>
+          </button>
         </div>
       </form>
     </div>
